@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#634d00",
+                    "inverse-surface": "#0c0f0f",
+                    "on-secondary": "#e9f4ff",
+                    "surface-bright": "#f6f6f6",
+                    "on-secondary-fixed-variant": "#375c75",
+                    "on-primary-fixed-variant": "#4f2600",
+                    "secondary-dim": "#2e536c",
+                    "primary-fixed-dim": "#e97b00",
+                    "surface-container-high": "#e1e3e3",
+                    "on-tertiary-container": "#594500",
+                    "on-surface": "#2d2f2f",
+                    "on-background": "#2d2f2f",
+                    "error": "#b02500",
+                    "tertiary-fixed-dim": "#edbe23",
+                    "secondary-fixed-dim": "#aed3f1",
+                    "on-secondary-container": "#2d526b",
+                    "on-error-container": "#520c00",
+                    "tertiary-fixed": "#fccc33",
+                    "surface-tint": "#8e4900",
+                    "on-primary": "#fff0e7",
+                    "background": "#f6f6f6",
+                    "primary-container": "#fd8603",
+                    "tertiary-container": "#fccc33",
+                    "outline": "#757777",
+                    "on-tertiary": "#fff1d6",
+                    "surface": "#f6f6f6",
+                    "on-error": "#ffefec",
+                    "on-tertiary-fixed-variant": "#644e00",
+                    "surface-container-highest": "#dbdddd",
+                    "surface-dim": "#d2d5d5",
+                    "on-tertiary-fixed": "#423200",
+                    "on-primary-container": "#421e00",
+                    "primary-dim": "#7d3f00",
+                    "inverse-primary": "#fd8603",
+                    "error-container": "#f95630",
+                    "primary": "#8e4900",
+                    "surface-container": "#e7e8e8",
+                    "surface-variant": "#dbdddd",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#bce1ff",
+                    "primary-fixed": "#fd8603",
+                    "on-secondary-fixed": "#183f57",
+                    "secondary": "#3b5f78",
+                    "outline-variant": "#acadad",
+                    "secondary-container": "#bce1ff",
+                    "on-primary-fixed": "#0f0400",
+                    "surface-container-low": "#f0f1f1",
+                    "error-dim": "#b92902",
+                    "inverse-on-surface": "#9c9d9d",
+                    "on-surface-variant": "#5a5c5c",
+                    "tertiary": "#715800"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "1rem",
+                    "xl": "1.25rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ticket-cutout {
+            mask-image: radial-gradient(circle at 0 50%, transparent 12px, black 13px),
+                        radial-gradient(circle at 100% 50%, transparent 12px, black 13px);
+            mask-composite: intersect;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-extrabold tracking-tighter text-orange-600 dark:text-orange-500 font-['Plus_Jakarta_Sans']">Linhfood</span>
+<div class="hidden md:flex gap-8">
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-orange-500 transition-colors duration-200" href="#">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-orange-500 transition-colors duration-200" href="#">Restaurants</a>
+<a class="text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 font-extrabold pb-1" href="#">Khuyến mãi</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-orange-500 transition-colors duration-200" href="#">Orders</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-orange-500 cursor-pointer" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-orange-500 cursor-pointer" data-icon="notifications">notifications</span>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-surface-container">
+<img alt="User profile" data-alt="Close-up portrait of a smiling young professional man with a friendly expression in a modern office setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3Wmfi0Zzxgq-KMgp9OtLQ32lv5RpDRvF-z_HiNC4Bf91mXeTwpF1NZ3WKHtdLRKMVpTFnmsOHqMJ6hDD-A3ffuOGS2MWxENoCAMJq50bgIT6B7_5CHBz1Z-4SMoBIsj2vjCFU3KRIavFfd-r9QEaa6pxtzkR5Zpzz-tpjoHT1Q7RrYJMSZhjSt85YTZnYNAw4KYzKXKebEyOV7x_6i7DENrITnGQ20MvSgjSnzpeBZgrg2-aLPFuWkzoQ5ravV5WhEHDUqo9qye4"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Promo Banner Hero -->
+<section class="max-w-7xl mx-auto px-6 mb-16">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary to-primary-container p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="z-10 text-center md:text-left">
+<span class="inline-block px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-xs font-extrabold uppercase rounded-full mb-6">Ưu đãi độc quyền</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-primary-fixed leading-none mb-6 tracking-tight">Mã giảm giá hot nhất</h1>
+<p class="text-on-primary text-xl max-w-xl mb-8 font-medium">Thưởng thức bữa tiệc gourmet với ưu đãi lên đến 50%. Tốc độ giao hàng nhanh như chớp cho người sành ăn.</p>
+<div class="flex flex-wrap gap-4 justify-center md:justify-start">
+<button class="bg-on-primary-fixed text-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:scale-105 transition-transform active:opacity-80">Săn mã ngay</button>
+<button class="bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-white/30 transition-all">Xem chi tiết</button>
+</div>
+</div>
+<div class="relative w-full md:w-1/2 aspect-square max-w-md z-10">
+<div class="absolute inset-0 bg-white/10 rounded-full blur-3xl scale-125"></div>
+<img alt="Delicious Pizza" class="w-full h-full object-contain relative drop-shadow-2xl" data-alt="Gourmet pepperoni pizza with melting cheese and fresh basil leaves breaking the frame, vibrant professional food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtZVuIbW-7SC5iS70ZwFE-0iBYFK3GXBetobjDX_Ryu143jpNjHy11XrrdmorNDQJWLJN5ZsyBejQJMaSgvG1xPRX4URcIvTGV_u3-i-hukcthRa_KtvdkMXimBe4mnGtO0xwS6_qNv5yPcrbI1XQ7Ss229xTmVOLW9VTy_fs0DJG9vkUtRK_Ak9Cphs7o_5_mUKWLuDfOrICgNsoqYySeZeSGyY_oU9i9ivp6fndfY8mF6Ao9VZHKKfAZ6tUH1OmumjgpXs0nCqg"/>
+</div>
+</div>
+</section>
+<!-- Voucher Center Grid -->
+<section class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between mb-10">
+<h2 class="font-headline text-3xl font-extrabold tracking-tight">Voucher của bạn</h2>
+<div class="flex gap-4">
+<span class="text-sm font-bold text-orange-600 flex items-center gap-1 cursor-pointer hover:underline">
+                        Xem tất cả <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Asymmetric Bento Grid for Vouchers -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Voucher Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] ticket-cutout border-l-8 border-orange-500 overflow-hidden shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined" data-weight="fill">local_mall</span>
+</div>
+<div>
+<h3 class="font-headline font-extrabold text-lg leading-tight">Giảm 30K cho đơn từ 100K</h3>
+<p class="text-xs text-on-surface-variant font-medium">Toàn sàn Linhfood</p>
+</div>
+</div>
+<span class="bg-error-container text-on-error-container text-[10px] font-black px-2 py-1 rounded uppercase">Hot</span>
+</div>
+<div class="my-6 border-t-2 border-dashed border-surface-container"></div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Mã: LINHFOOD30</p>
+<p class="text-[10px] text-zinc-400">HSD: 31/12/2024</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-5 py-2 rounded-lg font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Lưu mã</button>
+</div>
+</div>
+<!-- Voucher Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] ticket-cutout border-l-8 border-secondary-dim overflow-hidden shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-secondary-dim">
+<span class="material-symbols-outlined" data-weight="fill">delivery_dining</span>
+</div>
+<div>
+<h3 class="font-headline font-extrabold text-lg leading-tight">FreeShip Xtra up to 25K</h3>
+<p class="text-xs text-on-surface-variant font-medium">Cho đơn từ 50K</p>
+</div>
+</div>
+</div>
+<div class="my-6 border-t-2 border-dashed border-surface-container"></div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Mã: FREESHIPNOW</p>
+<p class="text-[10px] text-zinc-400">HSD: 25/12/2024</p>
+</div>
+<button class="bg-secondary-dim text-white px-5 py-2 rounded-lg font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Copy mã</button>
+</div>
+</div>
+<!-- Voucher Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] ticket-cutout border-l-8 border-tertiary-dim overflow-hidden shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center text-tertiary-dim">
+<span class="material-symbols-outlined" data-weight="fill">verified</span>
+</div>
+<div>
+<h3 class="font-headline font-extrabold text-lg leading-tight">Giảm 50% max 100K</h3>
+<p class="text-xs text-on-surface-variant font-medium">Dành cho bạn mới</p>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-black px-2 py-1 rounded uppercase">New</span>
+</div>
+<div class="my-6 border-t-2 border-dashed border-surface-container"></div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Mã: HELLOLINH</p>
+<p class="text-[10px] text-zinc-400">HSD: 30/12/2024</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-5 py-2 rounded-lg font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Lưu mã</button>
+</div>
+</div>
+<!-- Voucher Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] ticket-cutout border-l-8 border-orange-500 overflow-hidden shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined" data-weight="fill">payments</span>
+</div>
+<div>
+<h3 class="font-headline font-extrabold text-lg leading-tight">Hoàn xu 15% tối đa 20K</h3>
+<p class="text-xs text-on-surface-variant font-medium">Thanh toán qua ví LinhPay</p>
+</div>
+</div>
+</div>
+<div class="my-6 border-t-2 border-dashed border-surface-container"></div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Mã: LINHPAY15</p>
+<p class="text-[10px] text-zinc-400">HSD: 31/12/2024</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-5 py-2 rounded-lg font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Lưu mã</button>
+</div>
+</div>
+<!-- Voucher Card 5 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] ticket-cutout border-l-8 border-zinc-400 overflow-hidden shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-lg bg-zinc-100 flex items-center justify-center text-zinc-600">
+<span class="material-symbols-outlined" data-weight="fill">restaurant_menu</span>
+</div>
+<div>
+<h3 class="font-headline font-extrabold text-lg leading-tight">Giảm 20% Combo Nhóm</h3>
+<p class="text-xs text-on-surface-variant font-medium">Tại các nhà hàng đối tác</p>
+</div>
+</div>
+</div>
+<div class="my-6 border-t-2 border-dashed border-surface-container"></div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Mã: TEAMFOOD20</p>
+<p class="text-[10px] text-zinc-400">HSD: 15/01/2025</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-5 py-2 rounded-lg font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Lưu mã</button>
+</div>
+</div>
+<!-- Voucher Card 6 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] ticket-cutout border-l-8 border-orange-500 overflow-hidden shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined" data-weight="fill">fastfood</span>
+</div>
+<div>
+<h3 class="font-headline font-extrabold text-lg leading-tight">Tặng 1 trà sữa 0đ</h3>
+<p class="text-xs text-on-surface-variant font-medium">Khi đặt đơn từ 150K</p>
+</div>
+</div>
+</div>
+<div class="my-6 border-t-2 border-dashed border-surface-container"></div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Mã: MILKTRA0D</p>
+<p class="text-[10px] text-zinc-400">HSD: 31/12/2024</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-5 py-2 rounded-lg font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Lưu mã</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Terms & Conditions Section -->
+<section class="max-w-7xl mx-auto px-6 mt-16">
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant/15">
+<h3 class="font-headline text-xl font-bold mb-6">Điều khoản &amp; Điều kiện sử dụng Voucher</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<ul class="space-y-3 text-sm text-on-surface-variant">
+<li class="flex gap-2"><span class="material-symbols-outlined text-orange-500 text-sm">check_circle</span> Mỗi voucher chỉ áp dụng cho 01 lần sử dụng duy nhất.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-orange-500 text-sm">check_circle</span> Không áp dụng đồng thời với các chương trình khuyến mãi khác.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-orange-500 text-sm">check_circle</span> Voucher không có giá trị quy đổi thành tiền mặt.</li>
+</ul>
+<ul class="space-y-3 text-sm text-on-surface-variant">
+<li class="flex gap-2"><span class="material-symbols-outlined text-orange-500 text-sm">info</span> Linhfood có quyền từ chối áp dụng voucher nếu phát hiện gian lận.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-orange-500 text-sm">info</span> Hạn sử dụng được quy định rõ trên mỗi voucher.</li>
+<li class="mt-4"><a class="text-orange-600 font-bold hover:underline" href="#">Xem chi tiết quy định chung →</a></li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-zinc-50 dark:bg-zinc-950 mt-auto py-12">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div>
+<span class="text-xl font-black text-orange-600 font-['Plus_Jakarta_Sans'] block mb-4">Linhfood</span>
+<p class="text-zinc-500 dark:text-zinc-500 text-sm font-['Inter'] leading-relaxed mb-6">© 2024 Linhfood. The Kinetic Gourmet Experience. Trải nghiệm ẩm thực không giới hạn với tốc độ và sự tinh tế.</p>
+<div class="flex gap-4">
+<a class="text-zinc-500 hover:text-orange-600 transition-all" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-zinc-500 hover:text-orange-600 transition-all" href="#"><span class="material-symbols-outlined">camera</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<h4 class="font-bold text-sm mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-zinc-500 dark:text-zinc-500 text-sm hover:text-orange-600 transition-all" href="#">About Us</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-500 text-sm hover:text-orange-600 transition-all" href="#">Contact Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-zinc-500 dark:text-zinc-500 text-sm hover:text-orange-600 transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-500 text-sm hover:text-orange-600 transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-4">Newsletter</h4>
+<p class="text-zinc-500 text-xs mb-4">Nhận ngay thông tin ưu đãi mới nhất từ Linhfood.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-high border-none rounded-lg text-sm px-4 py-2 w-full focus:ring-2 focus:ring-orange-500" placeholder="Email của bạn" type="email"/>
+<button class="bg-orange-600 text-white p-2 rounded-lg hover:bg-orange-700 transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

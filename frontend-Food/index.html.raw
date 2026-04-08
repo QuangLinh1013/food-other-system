@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Linhfood - Đồ ăn ngon, Giao nhanh tận cửa</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#2d526b",
+                        "on-background": "#2d2f2f",
+                        "primary": "#8e4900",
+                        "tertiary": "#715800",
+                        "on-primary-fixed": "#0f0400",
+                        "on-error-container": "#520c00",
+                        "on-tertiary-fixed-variant": "#644e00",
+                        "surface-variant": "#dbdddd",
+                        "on-surface-variant": "#5a5c5c",
+                        "primary-fixed": "#fd8603",
+                        "primary-fixed-dim": "#e97b00",
+                        "secondary-fixed-dim": "#aed3f1",
+                        "error": "#b02500",
+                        "surface-container-highest": "#dbdddd",
+                        "on-primary-container": "#421e00",
+                        "on-error": "#ffefec",
+                        "on-tertiary-container": "#594500",
+                        "error-dim": "#b92902",
+                        "on-secondary": "#e9f4ff",
+                        "surface-container": "#e7e8e8",
+                        "tertiary-fixed-dim": "#edbe23",
+                        "surface-tint": "#8e4900",
+                        "on-tertiary": "#fff1d6",
+                        "tertiary-fixed": "#fccc33",
+                        "secondary-dim": "#2e536c",
+                        "on-secondary-fixed-variant": "#375c75",
+                        "secondary-fixed": "#bce1ff",
+                        "on-tertiary-fixed": "#423200",
+                        "primary-dim": "#7d3f00",
+                        "on-secondary-fixed": "#183f57",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-dim": "#634d00",
+                        "inverse-primary": "#fd8603",
+                        "error-container": "#f95630",
+                        "inverse-on-surface": "#9c9d9d",
+                        "surface-dim": "#d2d5d5",
+                        "on-primary": "#fff0e7",
+                        "outline": "#757777",
+                        "surface": "#f6f6f6",
+                        "primary-container": "#fd8603",
+                        "outline-variant": "#acadad",
+                        "surface-container-high": "#e1e3e3",
+                        "surface-container-low": "#f0f1f1",
+                        "surface-bright": "#f6f6f6",
+                        "on-primary-fixed-variant": "#4f2600",
+                        "secondary-container": "#bce1ff",
+                        "tertiary-container": "#fccc33",
+                        "inverse-surface": "#0c0f0f",
+                        "background": "#f6f6f6",
+                        "secondary": "#3b5f78",
+                        "on-surface": "#2d2f2f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #8e4900 0%, #fd8603 100%);
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(to right, #8e4900, #fd8603);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background antialiased">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black italic tracking-tighter text-orange-600 dark:text-orange-500 font-headline">
+                Linhfood
+            </div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] font-bold text-sm tracking-tight">
+<a class="text-orange-600 dark:text-orange-400 font-extrabold border-b-2 border-orange-600 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer" href="#">Trang chủ</a>
+<a class="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer" href="#">Menu</a>
+<a class="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer" href="#">Combo</a>
+<a class="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer" href="#">Khuyến mãi</a>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container px-5 py-2.5 rounded-lg font-bold text-sm transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 shadow-sm">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span>Giỏ hàng</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section: The "Kinetic Gourmet" -->
+<section class="relative overflow-hidden px-6 py-16 md:py-24 max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold leading-[1.1] text-on-background mb-6">
+                        Đồ ăn ngon – <br/>
+<span class="text-primary-fixed">Giao nhanh tận cửa</span>
+</h1>
+<p class="text-xl text-on-surface-variant mb-10 max-w-md">
+                        Đặt món chỉ trong 30 giây. Thưởng thức hương vị tuyệt hảo ngay tại nhà bạn.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="btn-primary-gradient text-white px-8 py-4 rounded-lg font-headline font-bold text-lg shadow-xl transition-all hover:scale-105 active:scale-95">
+                            Xem menu
+                        </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-lg font-headline font-bold text-lg transition-all hover:scale-105 active:scale-95">
+                            Ưu đãi hôm nay
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-fixed/20 rounded-full blur-3xl group-hover:bg-primary-fixed/30 transition-colors duration-500"></div>
+<img alt="Hero Food" class="relative w-full h-auto object-contain drop-shadow-2xl scale-110 transform -rotate-6 group-hover:rotate-0 transition-transform duration-700 ease-out" data-alt="overhead shot of a juicy gourmet wagyu beef burger with melting cheese and fresh toppings on a matte black plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2G75a5kynYBX-ff6FrojUBkcP56B4YP7-4JcS5x9DO6_MqtH9I9pMFPHOwVtoB-cjV7ki0mQvd2DjVhgbURdbrEptvTPGsqUlpCOXsMwwzjyxXiN78HXTaS9u4PnLmcpkNtW1LOnajpVywWEJma79UjOS1qJkkG6ux0Cn22VAtf7yeu9dL_E-8urWifiJfEQLL-0zkkhNfMcfKaf9sOQGO10zZq3fPur5ic-7SHgwds__an40j0OH4GPn-Kt65SJ4EjhKKcVLUjs"/>
+</div>
+</div>
+</section>
+<!-- Categories: Bento Style -->
+<section class="px-6 py-12 max-w-7xl mx-auto">
+<h2 class="font-headline text-3xl font-extrabold mb-8">Khám phá theo danh mục</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<!-- Category 1 -->
+<div class="bg-surface-container-low p-6 rounded-xl transition-all hover:bg-surface-container-high cursor-pointer group">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="ice_skating">cookie</span>
+</div>
+<span class="font-headline font-bold text-xl block">Ăn vặt</span>
+<p class="text-on-surface-variant text-sm mt-2">Giòn tan &amp; Đậm đà</p>
+</div>
+<!-- Category 2 -->
+<div class="bg-surface-container-low p-6 rounded-xl transition-all hover:bg-surface-container-high cursor-pointer group">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="local_bar">local_bar</span>
+</div>
+<span class="font-headline font-bold text-xl block">Nước uống</span>
+<p class="text-on-surface-variant text-sm mt-2">Tươi mát &amp; Sảng khoái</p>
+</div>
+<!-- Category 3 -->
+<div class="bg-surface-container-low p-6 rounded-xl transition-all hover:bg-surface-container-high cursor-pointer group col-span-2 md:col-span-1">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="fastfood">fastfood</span>
+</div>
+<span class="font-headline font-bold text-xl block">Combo</span>
+<p class="text-on-surface-variant text-sm mt-2">Tiết kiệm &amp; Đầy đủ</p>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="px-6 py-16 max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-10">
+<div>
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Gợi ý hôm nay</span>
+<h2 class="font-headline text-4xl font-extrabold mt-2">Món ăn bán chạy</h2>
+</div>
+<a class="text-primary font-bold hover:underline" href="#">Xem tất cả</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl group transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_40px_40px_-15px_rgba(45,47,47,0.06)]">
+<div class="relative aspect-square overflow-hidden rounded-lg mb-4 bg-surface-container-low">
+<span class="absolute top-2 left-2 z-10 bg-tertiary-container text-on-tertiary-fixed font-headline font-extrabold text-[10px] uppercase px-2 py-1 rounded">Best seller</span>
+<img alt="Burger" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="close up of a premium double cheeseburger with sesame seed bun and fresh lettuce against a minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrmkSfVkohgAwdk8TbzNFheWJyZpdXVVJH85ButrOsl6BOAac3MpXiL4M7h9H5gLlBODqu3UP77HmBNqUdax9OzUTwk6JjKz_Qtq0k8kQPMTVBI7RpmUsvKYmJ3xqIP4xvd3qClUjZ6JlOoCtJxPmNpRWXadHIi-c4YcM6kCNol0PmU-1GF8VYrh0PAGKlNzUUArsZ6kft2Ti7-Hb8dzORM3u2hMVJvgLcgpdg0zIkfU_EnhbqsKLXJLb-wJlhn7jtCjWBkqLm2As"/>
+</div>
+<h3 class="font-headline font-bold text-lg leading-tight mb-2 line-clamp-2">Burger Bò Phô Mai Đặc Biệt</h3>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-primary-fixed font-headline font-extrabold text-xl">85.000đ</span>
+<button class="bg-surface-container-high p-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl group transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_40px_40px_-15px_rgba(45,47,47,0.06)]">
+<div class="relative aspect-square overflow-hidden rounded-lg mb-4 bg-surface-container-low">
+<img alt="Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="classic italian pizza with melting mozzarella cheese and fresh basil leaves on a rustic board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDobKDC_v20KeOQG-AkawI1qt1opISucVI0sCrIn6ahu1ud4OBHxoVedFs3_ipVWC5dkgvZjZZkRaeqwDv9N-0FAOUdwRZwRFDxPAvPi-9N50cUJgjs0vYeZxXb8NgfDbWj6ENNe72cMKBdv_wo_mFjE8N_pyxmbnsD06dcXdaakOTrvvqLjcpFjf7c-ql7x20ZZWOy0Ygh2QuBFbkLgdBRijao6Kb71CBOWEDByIw6PEZMi1B4zZUa1w9Yys97paI5Sd6pVUmsbk0"/>
+</div>
+<h3 class="font-headline font-bold text-lg leading-tight mb-2 line-clamp-2">Pizza Margherita Truyền Thống</h3>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-primary-fixed font-headline font-extrabold text-xl">120.000đ</span>
+<button class="bg-surface-container-high p-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl group transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_40px_40px_-15px_rgba(45,47,47,0.06)]">
+<div class="relative aspect-square overflow-hidden rounded-lg mb-4 bg-surface-container-low">
+<span class="absolute top-2 left-2 z-10 bg-error text-white font-headline font-extrabold text-[10px] uppercase px-2 py-1 rounded">Hot</span>
+<img alt="Chicken" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="crispy fried chicken wings glazed with spicy honey sauce and sprinkled with sesame seeds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHCpRNUg7xJoqQcjYIpkr2YPd14VaRx4YAtXajIAuyjC2TpdcRsKRMdqBqAovcWVFSKeID-ShGute8Luhq4zLBHKySW4nV11UPk8FNZfVGL2ZPYXtMA8eFx2J1cgn-7MRxb6zkdNhI2B47Wu6SIg7Rw3IMO8vIyMrK1t_wEOVcLEpilaNONQR41xXNMiXKcDWuv5lvH23JtcuGxnvU6VK-aB60-9oV9UHmW4fmoIgjGTeWF-oUzRGlSpx1_nQnO2Is4gyJxrwiNEg"/>
+</div>
+<h3 class="font-headline font-bold text-lg leading-tight mb-2 line-clamp-2">Cánh Gà Sốt Cay Hàn Quốc</h3>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-primary-fixed font-headline font-extrabold text-xl">65.000đ</span>
+<button class="bg-surface-container-high p-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl group transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_40px_40px_-15px_rgba(45,47,47,0.06)]">
+<div class="relative aspect-square overflow-hidden rounded-lg mb-4 bg-surface-container-low">
+<img alt="Salad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="healthy vibrant salad bowl with grilled salmon, avocado, quinoa and fresh greens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvoTIolBoSekK_KZAXmWq_wqmfe4EC9NVy9PmRV44dXdjptAilBIndGW-sKjqpz9omhcYFNeZ0vPAd4RM_N1NKPurIunm7JOnvLPO4iSg-ZWVb4mNCSO1g-gtGZoByqeh0fonGUid2qIZMsNl1s0rawEoDjcJJwm4fjaI4ztNSIknZ3uVETJ5F9M16CB9csr3ct6fBQliv8WvbK-aeSefu9a1JF8BCGjWEJbtp3JSz9V6FsjrGR5l0KDLZ31xyK3mwo2NGnslVaM4"/>
+</div>
+<h3 class="font-headline font-bold text-lg leading-tight mb-2 line-clamp-2">Salad Cá Hồi Áp Chảo</h3>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-primary-fixed font-headline font-extrabold text-xl">95.000đ</span>
+<button class="bg-surface-container-high p-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Horizontal Banner -->
+<section class="px-6 py-12 max-w-7xl mx-auto">
+<div class="hero-gradient rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-white relative overflow-hidden">
+<div class="z-10 relative">
+<span class="bg-white/20 px-3 py-1 rounded text-sm font-bold uppercase tracking-widest mb-4 inline-block">Ưu đãi độc quyền</span>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-4">Combo Gia Đình <br/> Giảm Ngay 30%</h2>
+<p class="text-lg text-white/90 mb-8 max-w-md">Áp dụng cho mọi đơn hàng Combo trên 300k. Đừng bỏ lỡ!</p>
+<button class="bg-white text-primary-fixed px-8 py-3 rounded-lg font-headline font-bold hover:bg-surface transition-colors shadow-lg">
+                        Nhận ưu đãi ngay
+                    </button>
+</div>
+<div class="md:w-1/2 relative">
+<img alt="Combo Promo" class="rounded-xl shadow-2xl rotate-2" data-alt="delicious assorted family style meal on a table featuring pasta, grilled meats and colorful side dishes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0LZZbG7wcJmLluJ_1zvD3ZbXeYtdVNjsc04rNB6lQ_I0Dud94ogotgjkignd7ogDqkmpBWr65343LulZwXtMJNXwzN6EiH0ZUh69e7pUwfqmgzIDoqPiV8r2w3F1DVqwzgur0tMVRllEQlP8AzIVtVQTC_5b_WyeCn8A_ikX3XsFp-NJrDT-LSQ8MOLd6aaLKcwTkv_M2DuE91BMFTi-KYI8nNwWSCMpZcU-S_ZW0xtvag1u_wTdQCzKviezffB-qPTsdmY8QEN4"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+</section>
+<!-- Features Grid -->
+<section class="px-6 py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 bg-primary-fixed/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-4xl" data-icon="local_shipping">local_shipping</span>
+</div>
+<h3 class="font-headline text-xl font-bold">Giao nhanh</h3>
+<p class="text-on-surface-variant">Cam kết giao hàng trong vòng 30 phút kể từ khi xác nhận.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 bg-primary-fixed/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-4xl" data-icon="restaurant">restaurant</span>
+</div>
+<h3 class="font-headline text-xl font-bold">Đồ ăn tươi</h3>
+<p class="text-on-surface-variant">Nguyên liệu được tuyển chọn kỹ lưỡng, đảm bảo vệ sinh ATTP.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 bg-primary-fixed/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-4xl" data-icon="payments">payments</span>
+</div>
+<h3 class="font-headline text-xl font-bold">Giá hợp lý</h3>
+<p class="text-on-surface-variant">Nhiều chương trình ưu đãi, tích điểm đổi quà hấp dẫn.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-12 px-6 bg-gray-50 dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-xl font-bold text-orange-600 font-headline">Linhfood</div>
+<p class="font-['Inter'] text-sm text-gray-500 dark:text-gray-400 max-w-xs text-center md:text-left">
+                    © 2024 Linhfood. All rights reserved. Trải nghiệm ẩm thực tuyệt vời nhất.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Inter'] text-sm">
+<a class="text-gray-400 hover:text-orange-500 transition-colors duration-200" href="#">Về chúng tôi</a>
+<a class="text-gray-400 hover:text-orange-500 transition-colors duration-200" href="#">Chính sách bảo mật</a>
+<a class="text-gray-400 hover:text-orange-500 transition-colors duration-200" href="#">Điều khoản sử dụng</a>
+<a class="text-gray-400 hover:text-orange-500 transition-colors duration-200" href="#">Liên hệ</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant cursor-pointer hover:bg-primary-container hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="facebook">social_leaderboard</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant cursor-pointer hover:bg-primary-container hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="instacart">retweet</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

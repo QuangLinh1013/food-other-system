@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#2d2f2f",
+                    "surface-bright": "#f6f6f6",
+                    "inverse-primary": "#fd8603",
+                    "inverse-on-surface": "#9c9d9d",
+                    "on-primary-fixed": "#0f0400",
+                    "surface-tint": "#8e4900",
+                    "on-secondary-fixed-variant": "#375c75",
+                    "surface-container-low": "#f0f1f1",
+                    "on-primary": "#fff0e7",
+                    "secondary-fixed-dim": "#aed3f1",
+                    "surface-variant": "#dbdddd",
+                    "on-primary-container": "#421e00",
+                    "primary-fixed": "#fd8603",
+                    "secondary": "#3b5f78",
+                    "surface-container-high": "#e1e3e3",
+                    "tertiary-fixed": "#fccc33",
+                    "secondary-dim": "#2e536c",
+                    "primary-container": "#fd8603",
+                    "tertiary": "#715800",
+                    "background": "#f6f6f6",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#b02500",
+                    "primary-dim": "#7d3f00",
+                    "tertiary-container": "#fccc33",
+                    "on-error-container": "#520c00",
+                    "primary-fixed-dim": "#e97b00",
+                    "on-primary-fixed-variant": "#4f2600",
+                    "secondary-container": "#bce1ff",
+                    "tertiary-dim": "#634d00",
+                    "outline-variant": "#acadad",
+                    "surface-container-highest": "#dbdddd",
+                    "on-tertiary-fixed": "#423200",
+                    "on-tertiary": "#fff1d6",
+                    "on-error": "#ffefec",
+                    "inverse-surface": "#0c0f0f",
+                    "on-background": "#2d2f2f",
+                    "error-container": "#f95630",
+                    "secondary-fixed": "#bce1ff",
+                    "tertiary-fixed-dim": "#edbe23",
+                    "surface-container": "#e7e8e8",
+                    "on-secondary": "#e9f4ff",
+                    "outline": "#757777",
+                    "on-secondary-container": "#2d526b",
+                    "on-surface-variant": "#5a5c5c",
+                    "on-tertiary-fixed-variant": "#644e00",
+                    "on-secondary-fixed": "#183f57",
+                    "surface-dim": "#d2d5d5",
+                    "surface": "#f6f6f6",
+                    "on-tertiary-container": "#594500",
+                    "primary": "#8e4900",
+                    "error-dim": "#b92902"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface">
+<!-- SideNavBar (Execution from JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 z-40 bg-slate-50 dark:bg-slate-900 flex flex-col h-full py-6 px-4">
+<div class="mb-10 px-2 flex items-center gap-3">
+<div class="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center text-white font-black italic">LF</div>
+<div>
+<h1 class="text-2xl font-black text-orange-600 dark:text-orange-500 uppercase italic leading-none">Linhfood</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">Admin Console</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active: Overview (Mapped to Tổng quan) -->
+<a class="flex items-center gap-3 px-4 py-3 text-orange-600 dark:text-orange-400 font-extrabold border-r-4 border-orange-600 dark:border-orange-500 bg-orange-50 dark:bg-orange-950/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight">Orders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight">Products</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight">Promotions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3 px-2">
+<img alt="Admin" class="w-10 h-10 rounded-full object-cover" data-alt="professional headshot of a smiling young male administrator with short dark hair in a clean office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmv1FZE8jq9cVKWhv3VYhSG6m7rRgtdjs13eAY2xTWUsVfqK6DhnB-vXcNY7sB6QXn7v3cZon9UjMVhAOKVkewIA4k9Fygh3EY_zfjvbqiAb8gFOxhsii5GRZ6nOCMnEILr0kQrrN-x-jFAxdCMcj5d8Q6myYDyin9voUDMnP9OnBbI6s7yTClv2Jgoe4anzEbk52mDCM1nbNYmSU7TZkJPZsMRCJc9Qq3sygsqOtJoMD9eglwCAP5HbDWjash5a5NLtS-EhjNcYw"/>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Admin User</p>
+<p class="text-xs text-slate-500">Super Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar (Execution from JSON) -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-30 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800 flex justify-between items-center h-16 px-8 ml-64">
+<div class="flex-1 flex items-center gap-4">
+<div class="relative w-full max-w-md group focus-within:ring-2 focus-within:ring-orange-500/20 rounded-lg transition-all">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-900 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-0" placeholder="Tìm kiếm đơn hàng, khách hàng..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 ml-6">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-orange-600 rounded-full"></span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">settings</span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-['Plus_Jakarta_Sans'] font-bold text-slate-700 dark:text-slate-200">Linhfood Admin</span>
+<img alt="Admin Avatar" class="w-9 h-9 rounded-full ring-2 ring-orange-500/10" data-alt="profile portrait of a tech executive in a minimal studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjDnpn8gmbHEkPUeSWlZf_sGLVWW6ZZJuPWmH-m6K6QG2vJGJv4ni-2xBJUYoDW6VAt-no4v_j-Oil-Ydnm1U6NLga8-VbmzMfn0rPz1eoFc-VIsQo0HoYuUWzf468yrZ6HH65XwJe8zDPa4NWG_FyIVgjJOjnwk1EeoPtpqCf5EGIDjYldGbLQ7tPRxzFoj6zmnbT9oFjU2T3Nw9gnWEvVtd-TZ7b5TA45YCE2Do42ojNO51kXU9E9c7_2ySaMQLewgNUmK1T28I"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 px-8 pb-12 min-h-screen bg-surface">
+<!-- Welcome Header -->
+<div class="mb-8">
+<h2 class="text-3xl font-black headline tracking-tight text-on-surface">Tổng quan hệ thống</h2>
+<p class="text-on-surface-variant font-medium">Chào mừng trở lại! Đây là tóm tắt hoạt động hôm nay.</p>
+</div>
+<!-- KPI Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<!-- Card 1: Revenue -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none shadow-sm group hover:scale-[1.02] transition-transform duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-orange-50 rounded-lg text-orange-600">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<span class="text-xs font-bold px-2 py-1 bg-green-50 text-green-600 rounded-full">+12%</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant mb-1">Tổng Doanh Thu</p>
+<p class="text-2xl font-black headline text-on-surface">24.5M <span class="text-sm font-normal">VNĐ</span></p>
+</div>
+<!-- Card 2: Orders -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none shadow-sm group hover:scale-[1.02] transition-transform duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-orange-50 rounded-lg text-orange-600">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</div>
+<span class="text-xs font-bold px-2 py-1 bg-green-50 text-green-600 rounded-full">+8%</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant mb-1">Đơn Mới</p>
+<p class="text-2xl font-black headline text-on-surface">124 <span class="text-sm font-normal">đơn</span></p>
+</div>
+<!-- Card 3: Conversion -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none shadow-sm group hover:scale-[1.02] transition-transform duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-orange-50 rounded-lg text-orange-600">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+</div>
+<span class="text-xs font-bold px-2 py-1 bg-green-50 text-green-600 rounded-full">+0.5%</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant mb-1">Tỷ lệ chuyển đổi</p>
+<p class="text-2xl font-black headline text-on-surface">3.2%</p>
+</div>
+<!-- Card 4: Customers -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none shadow-sm group hover:scale-[1.02] transition-transform duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-orange-50 rounded-lg text-orange-600">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">group</span>
+</div>
+<span class="text-xs font-bold px-2 py-1 bg-green-50 text-green-600 rounded-full">+15%</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant mb-1">Khách hàng</p>
+<p class="text-2xl font-black headline text-on-surface">1,200</p>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+<!-- Line Chart Container -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h3 class="text-lg font-bold headline">Doanh Thu Trong Tuần</h3>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-bold">Thống kê theo 7 ngày gần nhất</p>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs font-bold bg-orange-600 text-white rounded-lg">Tuần</button>
+<button class="px-3 py-1 text-xs font-bold bg-surface-container-low text-on-surface-variant rounded-lg">Tháng</button>
+</div>
+</div>
+<!-- Visual Mockup of a Chart using SVG for "Kinetic" feel -->
+<div class="h-64 w-full relative">
+<svg class="w-full h-full" viewbox="0 0 800 200">
+<!-- Grid Lines -->
+<line stroke="#f0f1f1" stroke-width="1" x1="0" x2="800" y1="0" y2="0"></line>
+<line stroke="#f0f1f1" stroke-width="1" x1="0" x2="800" y1="50" y2="50"></line>
+<line stroke="#f0f1f1" stroke-width="1" x1="0" x2="800" y1="100" y2="100"></line>
+<line stroke="#f0f1f1" stroke-width="1" x1="0" x2="800" y1="150" y2="150"></line>
+<line stroke="#f0f1f1" stroke-width="1" x1="0" x2="800" y1="200" y2="200"></line>
+<!-- Smooth Curve Area -->
+<path d="M0 160 Q 100 120 200 150 T 400 80 T 600 120 T 800 50 L 800 200 L 0 200 Z" fill="rgba(251, 133, 0, 0.05)"></path>
+<!-- Smooth Curve Line -->
+<path d="M0 160 Q 100 120 200 150 T 400 80 T 600 120 T 800 50" fill="none" stroke="#fb8500" stroke-linecap="round" stroke-width="4"></path>
+<!-- Points -->
+<circle cx="200" cy="150" fill="#fb8500" r="4"></circle>
+<circle cx="400" cy="80" fill="#fb8500" r="4"></circle>
+<circle cx="600" cy="120" fill="#fb8500" r="4"></circle>
+<circle cx="800" cy="50" fill="#fb8500" r="4"></circle>
+</svg>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+<span>Thứ 2</span>
+<span>Thứ 3</span>
+<span>Thứ 4</span>
+<span>Thứ 5</span>
+<span>Thứ 6</span>
+<span>Thứ 7</span>
+<span>Chủ Nhật</span>
+</div>
+</div>
+</div>
+<!-- Donut Chart Container -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col">
+<h3 class="text-lg font-bold headline mb-6">Tỷ lệ danh mục</h3>
+<div class="flex-1 flex flex-col justify-center items-center">
+<div class="relative w-48 h-48 mb-8">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<!-- Donut Segments -->
+<circle cx="18" cy="18" fill="transparent" r="15.9" stroke="#fccc33" stroke-dasharray="45 100" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.9" stroke="#fb8500" stroke-dasharray="35 100" stroke-dashoffset="-45" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.9" stroke="#3b5f78" stroke-dasharray="20 100" stroke-dashoffset="-80" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-black headline text-on-surface">100%</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Tổng thị phần</span>
+</div>
+</div>
+<div class="w-full space-y-3">
+<div class="flex justify-between items-center text-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#fccc33]"></span>
+<span class="font-medium">Đồ uống</span>
+</div>
+<span class="font-bold">45%</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#fb8500]"></span>
+<span class="font-medium">Ăn vặt</span>
+</div>
+<span class="font-bold">35%</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#3b5f78]"></span>
+<span class="font-medium">Combo</span>
+</div>
+<span class="font-bold">20%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Orders Table Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-8 flex justify-between items-center">
+<h3 class="text-xl font-bold headline">Đơn hàng gần đây</h3>
+<button class="text-sm font-bold text-orange-600 hover:underline">Xem tất cả</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-[10px] uppercase tracking-[0.2em] font-black">
+<th class="px-8 py-4">Mã Đơn</th>
+<th class="px-8 py-4">Khách Hàng</th>
+<th class="px-8 py-4">Giá Trị</th>
+<th class="px-8 py-4 text-right">Trạng Thái</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-5 font-black text-sm text-on-surface">#ORD-8821</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs">HA</div>
+<span class="font-medium text-sm">Hoàng Anh</span>
+</div>
+</td>
+<td class="px-8 py-5 font-bold text-sm">250.000đ</td>
+<td class="px-8 py-5 text-right">
+<span class="px-3 py-1 bg-green-50 text-green-600 text-[10px] font-black uppercase rounded-lg">Hoàn tất</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-5 font-black text-sm text-on-surface">#ORD-8822</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs">MT</div>
+<span class="font-medium text-sm">Minh Tuấn</span>
+</div>
+</td>
+<td class="px-8 py-5 font-bold text-sm">125.000đ</td>
+<td class="px-8 py-5 text-right">
+<span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-black uppercase rounded-lg">Đang giao</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-5 font-black text-sm text-on-surface">#ORD-8823</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs">LN</div>
+<span class="font-medium text-sm">Linh Nhi</span>
+</div>
+</td>
+<td class="px-8 py-5 font-bold text-sm">450.000đ</td>
+<td class="px-8 py-5 text-right">
+<span class="px-3 py-1 bg-green-50 text-green-600 text-[10px] font-black uppercase rounded-lg">Hoàn tất</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-5 font-black text-sm text-on-surface">#ORD-8824</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs">DK</div>
+<span class="font-medium text-sm">Duy Khoa</span>
+</div>
+</td>
+<td class="px-8 py-5 font-bold text-sm">89.000đ</td>
+<td class="px-8 py-5 text-right">
+<span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-black uppercase rounded-lg">Đang giao</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-5 font-black text-sm text-on-surface">#ORD-8825</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs">BP</div>
+<span class="font-medium text-sm">Bảo Phương</span>
+</div>
+</td>
+<td class="px-8 py-5 font-bold text-sm">310.000đ</td>
+<td class="px-8 py-5 text-right">
+<span class="px-3 py-1 bg-green-50 text-green-600 text-[10px] font-black uppercase rounded-lg">Hoàn tất</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</body></html>

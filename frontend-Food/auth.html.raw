@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Linhfood - Đăng nhập &amp; Đăng ký</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#0f0400",
+                        "on-error": "#ffefec",
+                        "surface": "#f6f6f6",
+                        "surface-dim": "#d2d5d5",
+                        "on-tertiary-container": "#594500",
+                        "tertiary-fixed": "#fccc33",
+                        "primary-fixed-dim": "#e97b00",
+                        "error-dim": "#b92902",
+                        "surface-container": "#e7e8e8",
+                        "on-surface-variant": "#5a5c5c",
+                        "tertiary-fixed-dim": "#edbe23",
+                        "on-secondary-container": "#2d526b",
+                        "on-surface": "#2d2f2f",
+                        "outline-variant": "#acadad",
+                        "surface-tint": "#8e4900",
+                        "tertiary-dim": "#634d00",
+                        "error-container": "#f95630",
+                        "primary-fixed": "#fd8603",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#e9f4ff",
+                        "secondary-fixed": "#bce1ff",
+                        "primary-dim": "#7d3f00",
+                        "on-tertiary-fixed": "#423200",
+                        "secondary-fixed-dim": "#aed3f1",
+                        "secondary": "#3b5f78",
+                        "background": "#f6f6f6",
+                        "on-primary-fixed-variant": "#4f2600",
+                        "on-secondary-fixed-variant": "#375c75",
+                        "inverse-on-surface": "#9c9d9d",
+                        "tertiary": "#715800",
+                        "surface-variant": "#dbdddd",
+                        "on-secondary-fixed": "#183f57",
+                        "error": "#b02500",
+                        "secondary-dim": "#2e536c",
+                        "primary-container": "#fd8603",
+                        "inverse-primary": "#fd8603",
+                        "tertiary-container": "#fccc33",
+                        "outline": "#757777",
+                        "surface-container-high": "#e1e3e3",
+                        "surface-container-highest": "#dbdddd",
+                        "on-tertiary-fixed-variant": "#644e00",
+                        "on-background": "#2d2f2f",
+                        "secondary-container": "#bce1ff",
+                        "primary": "#8e4900",
+                        "surface-container-low": "#f0f1f1",
+                        "on-primary": "#fff0e7",
+                        "on-error-container": "#520c00",
+                        "on-tertiary": "#fff1d6",
+                        "surface-bright": "#f6f6f6",
+                        "on-primary-container": "#421e00",
+                        "inverse-surface": "#0c0f0f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #8e4900 0%, #fd8603 100%);
+        }
+        .glass-overlay {
+            backdrop-filter: blur(8px);
+            background: rgba(15, 4, 0, 0.4);
+        }
+        .input-focus-ring:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(253, 134, 3, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<main class="min-h-screen flex flex-col md:flex-row">
+<!-- Left Side: Hero Image (Hidden on small mobile if content needs more space, but here visible for editorial feel) -->
+<section class="relative w-full md:w-1/2 h-[409px] md:h-screen overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Linhfood Signature Dish" class="w-full h-full object-cover" data-alt="Close-up of a premium artisan gourmet steak dish with vibrant vegetables and dark moody atmospheric lighting for a high-end restaurant vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzHJ_5hhRwWdgEpCkoA7Gal5PAIo3HT0TE61FSwOhg72LSwVYXdQKDA_zqvju8XVtjM2Nmm2vCbmAB1SOZTzJdZZ0vuHj7M0V_SEYxoMHtfazmPQFjXGWogDzIosZyndeRcRsmip-Mfecjj6i9Kh9uw8W0yGHzyne43YEjzOk1lXhd87on47wVGa_xLjvhxsJlHhnpF8T2U0UTpFBc5sI_l3fXWuTov3MDMUG9hlKhhRt6QPxiwmgrovPVdiSYe-9a_dZlAsohg6U"/>
+<div class="absolute inset-0 glass-overlay"></div>
+</div>
+<!-- Branding on Hero -->
+<div class="relative z-10 h-full flex flex-col justify-between p-8 md:p-12">
+<div class="flex items-center gap-2">
+<span class="text-white text-3xl font-black tracking-tighter font-headline">Linhfood</span>
+</div>
+<div class="max-w-md">
+<h2 class="text-white text-4xl md:text-5xl font-extrabold font-headline leading-tight mb-4">
+                        Trải nghiệm tinh hoa <span class="text-primary-fixed">ẩm thực</span> ngay tại nhà.
+                    </h2>
+<p class="text-white/80 text-lg body-lg">
+                        Tốc độ vượt trội. Hương vị tuyệt đỉnh. Sẵn sàng phục vụ bạn trong 30 phút.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Right Side: Auth Panel -->
+<section class="w-full md:w-1/2 min-h-[614px] md:h-screen bg-surface flex items-center justify-center p-6 md:p-16">
+<div class="w-full max-w-md space-y-10">
+<!-- Header -->
+<div class="text-center md:text-left">
+<h1 class="text-4xl font-extrabold font-headline text-on-surface tracking-tight mb-2">
+                        Chào mừng bạn
+                    </h1>
+<p class="text-on-surface-variant font-medium">
+                        Đăng nhập hoặc tạo tài khoản mới
+                    </p>
+</div>
+<!-- Social Logins (Action-First) -->
+<div class="space-y-4">
+<button class="w-full flex items-center justify-center gap-3 py-4 px-6 bg-surface-container-lowest rounded-lg font-semibold text-on-surface hover:bg-surface-container transition-colors duration-200">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNto5vhF7koUxTVO8xNeykUBR-DhBByj8DpZgOb7opi5HUqO1iL-RAh32FCEjmXPCANVcNmAoCxPmdLjY_HMPBkfaiocJfUUQT5s-Qob_eoqf6hUdGTqBTxV9yUeD9elaXdrwz2F7nn_ywMzsvyG1Mu-Zb9PMRsb_s_2WPzD5qDIFka2mR9HGQ3_uKGe6h2Gk0iDtTcroEgrdpIY7DAod0JG5Yvg1oc7sapStTaQsmwWGvKn4BRXFgDQoj0s25k9p1bj0mr_bgtDY"/>
+                        Tiếp tục với Google
+                    </button>
+<button class="w-full flex items-center justify-center gap-3 py-4 px-6 bg-[#1877F2] rounded-lg font-semibold text-white hover:opacity-90 transition-opacity duration-200">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+                        Tiếp tục với Facebook
+                    </button>
+<button class="w-full flex items-center justify-center gap-3 py-4 px-6 bg-black rounded-lg font-semibold text-white hover:opacity-90 transition-opacity duration-200">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M17.05 20.28c-.96.95-2.06 1.72-3.32 1.72-1.2 0-1.64-.74-3.03-.74-1.42 0-1.91.72-3.03.72-1.23 0-2.4-.82-3.43-1.87C2.11 18.02.5 14.19.5 10.51c0-3.69 2.39-5.63 4.67-5.63 1.19 0 2.13.71 3.03.71.86 0 1.57-.71 3.03-.71 2.04 0 3.82 1.05 4.88 2.6-4.14 1.71-3.45 7.15.54 8.76-.78 1.9-1.64 3.1-2.6 4.05zM12.03 4.83c-.02-2.58 2.13-4.67 4.57-4.83.25 2.87-2.74 5.06-4.57 4.83z"></path></svg>
+                        Tiếp tục với Apple
+                    </button>
+</div>
+<!-- Divider -->
+<div class="flex items-center gap-4">
+<div class="flex-1 h-[1px] bg-outline-variant/20"></div>
+<span class="text-outline text-xs font-bold uppercase tracking-widest">Hoặc sử dụng</span>
+<div class="flex-1 h-[1px] bg-outline-variant/20"></div>
+</div>
+<!-- Manual Form -->
+<form class="space-y-6">
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-1">Số điện thoại hoặc Email</label>
+<input class="w-full px-6 py-4 bg-surface-container-high rounded-lg border-none focus:ring-2 focus:ring-primary/20 transition-all input-focus-ring" placeholder="linhfood@example.com" type="text"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="text-sm font-bold text-on-surface-variant">Mật khẩu</label>
+<a class="text-xs font-bold text-primary hover:text-primary-dim transition-colors" href="#">Quên mật khẩu?</a>
+</div>
+<input class="w-full px-6 py-4 bg-surface-container-high rounded-lg border-none focus:ring-2 focus:ring-primary/20 transition-all input-focus-ring" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="w-full py-5 primary-gradient text-on-primary font-extrabold text-lg rounded-lg shadow-xl shadow-primary/20 active:scale-[0.98] transition-transform duration-100" type="submit">
+                        Đăng nhập
+                    </button>
+</form>
+<!-- Footer Link -->
+<div class="text-center">
+<p class="text-on-surface-variant font-medium">
+                        Chưa có tài khoản? 
+                        <a class="text-primary font-bold hover:underline ml-1" href="#">Đăng ký ngay</a>
+</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Support Help Anchor -->
+<div class="fixed bottom-6 right-6 md:bottom-12 md:right-12 hidden md:block">
+<button class="bg-surface-container-lowest p-4 rounded-full shadow-lg flex items-center justify-center text-on-surface hover:bg-white transition-all group border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">help</span>
+<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 group-hover:ml-2 font-bold whitespace-nowrap">Hỗ trợ</span>
+</button>
+</div>
+</body></html>
